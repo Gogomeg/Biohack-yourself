@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     # Apps
     'home',
+    'hacks',
 
     # Other
     'crispy_forms',
@@ -68,8 +69,9 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 ROOT_URLCONF = 'main.urls'
 
