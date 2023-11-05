@@ -27,6 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
+    text-align: center;
 }
 
 
@@ -79,4 +80,20 @@ img.logo {
 a.navbar-brand {
     width: 100px;
     margin-right: 120px;
+}
+
+
+.active {
+    border-bottom: 2px solid var(--purple);
+    font-weight: 500;
+}
+
+/* Form */
+
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--smal-box-shadow);
+    border-radius: 5px;
+    text-align: center;
 }
