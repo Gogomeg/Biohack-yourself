@@ -89,7 +89,7 @@ MIDDLEWARE = [
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap"
 
 
 ROOT_URLCONF = 'main.urls'
