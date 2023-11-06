@@ -72,9 +72,15 @@
           {% endif %}
         </ul>
         <!-- Form for search bar-->
-        <form class="form-inline">
+        <form
+          class="d-flex"
+          role="search"
+          method="GET"
+          action="{% url 'hacks' %}"
+        >
           <input
             class="form-control mr-sm-2"
+            name="q"
             type="search"
             placeholder="Search"
             aria-label="Search"

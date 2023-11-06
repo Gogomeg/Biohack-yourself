@@ -182,3 +182,18 @@ a.navbar-brand {
         text-decoration: none;
     }
 }
+
+@media screen and (min-width:40em) {
+    .form {
+        width: 50%;
+    }
+
+    .hack-cont {
+        flex-direction: row;
+    }
+
+    .img-container {
+        flex-direction: row;
+        width: 29%;
+    }
+}

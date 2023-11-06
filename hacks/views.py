@@ -56,3 +56,23 @@ class HackDetail(DetailView):
     template_name = "hacks/hack_detail.html"
     model = Hack
     context_object_name = "hack"
+
+
+class DeleteHack(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """Delete a health hack"""
+    model = Hack
+    success_url = '/hacks/'
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+
+class EditHack(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """Edit a health hack"""
+    template_name = 'hacks/edit_hack.html'
+    model = Hack
+    form_class = HackForm
+    success_url = '/hacks/'
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
