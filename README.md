@@ -1,39 +1,112 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+# Health Hacks Sharing
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+As a content creator I can choose an unique name for my story, and an unique URL will be generated, as well dates of update and create will be automatically generated and I will be able to add up number of likes for each post as well as status of the post (draft, published so that I can interact with my content.
+As a site administrator I can approve or disapprove comments so that I can filter out objectionable comments.
+As a site user I can register an account so that I can comment and like posts.
+As a site user I can like or unlike a post so that I can interact with the content.
+As a site user I can view a paginated list of posts so that I can easily select a post to view.
+As a site user I can click on a post so that I can see the full content of it.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+As a content creator I can see I have completed all the tasks related to a story to be published so that I can publish it.
+Given that I am a registered user who is logged in, and has created a post
+When I navigate to the post that I would like to delete
+Then I have the option to delete the post
+Given that I am a registered user who is logged in, has created a post and I am viewing the post I wish to delete
+When I click the delete post button
+Then I receive a confirmation window to confirm that I really want to delete the post
+Given that I am a registered user who is logged in, has created a post, navigated to that post and clicked on the delete post button
+When the confirmation window appears and I confirm the deletion
+Then the post is deleted from the system
+Given that I am a registered user, or a non registered user
+When I navigate to a health hack page that I did not create
+Then I do not have the option to delete the health hack
+Given that I am a user on the site
+When I navigate to the stories page
+Then I am presented with a list of the stories available
+Given that I am a user on the site
+When I navigate to the stories page
+And When I click on a story
+Then I am presented with the full story details
+Given that I am a user of the website
+When I navigate to the site
+Then I can access a search function to access related posts
+As a user or creator of content I can choose a user id that is unique so that I will not be connected to a different user.
 
-## Codeanywhere Reminders
+As a user, I can create, read, update or delete my own profile, so that login into the site.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+#Potential User Stories
 
-`python3 -m http.server`
+Create an account
+View my own account
+Edit my own account
+Delete my account
+Change my password
+Reset my password if I forget it
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+As a User, I can view health hacks clearly, so that I can follow them easily.
+Clear health hacks layout so its easy to identify which part is which
+Easy to read on mobile devices
+Easy to print out
+Easy to view multiple health hacks at the same time - summary cards
+As a User, I can make and receive comments on health hacks, so that I can ask questions, provide answers, or feedback.
+Potential User Stories
+Be able to ask questions
+Be notified if someone comments on my health hack
+Control the notifications
+Be able to respond to comments
+Report inappropriate comments to admin
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+As a stories user or creator I can log off the platform when I am done using it so that my data is protected against third party usage.
 
-`http_server`
+As a site owner I can restrict some features of the site to registered users so that it encourages people to sign up to the site.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Acceptance Criteria 1
+Given that a user is not registered or signed in,
+When they view a post,
+Then they are unable to save a story
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Acceptance Criteria 2
+Given that a user is not registered or signed in,
+When they look at the post options
+Then they do not have the ability to create a health hack
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Acceptance Criteria 3
+Given that a user is not registered or signed in,
+When they look at a health hack
+Then they are unable to provide a rating or comment
 
-To log into the Heroku toolbelt CLI:
+Acceptance Criteria 4
+Given that a user is not registered or signed in,
+When they encounter functionality that requires them to be signed in
+Then they are presented with a login or register button.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Technologies
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* Python
+* Django
+* HTML/CSS
+* Bootstrap
+* Google Cloud Platform
+* Cloudinary
+* ElephantSQL
 
----
+## Resource Links used in the video
 
-Happy coding!
+* https://cdnjs.com/libraries/bootstrap - CDN for bootstrap links
+* https://getbootstrap.com/docs/5.2/getting-started/introduction - Bootstrap documentation
+* https://uxwing.com/ - UX Wing icons
+* https://django-allauth.readthedocs.io/en/latest/installation.html - Django-Allauth
+* https://django-crispy-forms.readthedocs.io/en/latest/install.html - Crispy Forms
+* https://pypi.org/project/django-reorder/ - Django Reordered
+* https://docs.djangoproject.com/en/4.1/topics/class-based-views/mixins/ - Django Mixins
+* https://cloudinary.com/ - Cloudinary
+* https://django-ckeditor.readthedocs.io/en/latest/ - CKEditor
+* https://books.agiliq.com/projects/django-orm-cookbook/en/latest/query_relatedtool.html - Q Objects
+* https://www.w3schools.com/howto/howto_css_modals.asp - CSS Modal
+
+## Credits
+
+All images for recipes were taken from [Unsplash](https://unsplash.com/license)
+
+Recipe information was generated by [Chat GPT-3](https://chat.openai.com/chat)
