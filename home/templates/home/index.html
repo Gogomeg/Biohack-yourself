@@ -1,1 +1,37 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %}Home{% endblock %} /* go next row */
+{% block content %}
+
+<div class="container flex-column pt-3">
+  <section class="text-center">
+    <h1 class="main-title mx-auto">
+      Discover the Ultimate science based Health Hacks
+    </h1>
+
+    <p class="pt-4">
+      Welcome to our biohacks hub! We believe that anyone could optimize their
+      health if they have the properly documented/science based tools at their
+      fingertips. That's why we've created a platform that features a collection
+      of articles from the field of health and lifestyle optimization. You can
+      easily select your topic of interest and dive into the related articles.
+      Join us today and take control of your life!
+    </p>
+  </section>
+  <section>
+    <div class="hack-cont">
+      {% for hack in hacks %}
+      <a href="{% url 'hack_detail' hack.id %}" class="img-container">
+        <img
+          src="{{hack.image.url}}"
+          alt="{{hack.image_alt}}"
+          style="width: 100%"
+        />
+        <div class="centered">
+          <h2>{{hack.title}}</h2>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+{% endblock %}

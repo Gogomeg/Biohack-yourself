@@ -39,11 +39,11 @@ class Hacks(ListView):
     def get_queryset(self, **kwargs):
         query = self.request.GET.get("q")
         if query:
-            recipes = self.model.objects.filter(
-                Q(title__icontains=query)
-                | Q(description__icontains=query)
-                | Q(content__icontains=query)
-                | Q(hack_type__icontains=query)
+            hacks = self.model.objects.filter(
+                Q(title__icontains=query) |
+                Q(description__icontains=query) |
+                Q(content__icontains=query) |
+                Q(hack_type__icontains=query)
             )
         else:
             hacks = self.model.objects.all()
