@@ -36,7 +36,11 @@
             <a class="nav-link" href="#">Health Hacks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">New</a>
+            <a
+              class="nav-link {% if url_name == 'add_hack' %}active{% endif %}"
+              href="{% url 'add_hack' %}"
+              >New</a
+            >
           </li>
           {% if request.user.is.authenticated %}
           <li class="nav-item">
