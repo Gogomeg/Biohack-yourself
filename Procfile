@@ -1,1 +1,1 @@
-web: gunicorn hacks.wsgi
+web: gunicorn main.wsgi
