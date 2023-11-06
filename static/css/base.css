@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
-    text-align: center;
+    text-align: justify;
 }
 
 
@@ -121,8 +121,17 @@ a.navbar-brand {
 }
 
 .hack-container {
+    text-align: justify;
     display: flex;
     flex-direction: column;
+}
+
+div.content.p-3 p {
+    text-align: justify;
+}
+
+.hack-container p {
+    text-align: justify;
 }
 
 .content,

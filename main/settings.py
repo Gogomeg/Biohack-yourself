@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['biohack_yourself.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-gogomeg-biohack-yourself-kjjb3xhe21.us2.codeanyapp.com']
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -176,16 +176,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 # Cloudinary Settings
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 CLOUIDNARY_URL = os.environ.get('CLOUDINARY_URL')
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-MEDIA_URL = '/media/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
