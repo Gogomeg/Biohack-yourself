@@ -29,11 +29,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-gogomeg-biohack-yourself-kjjb3xhe21.us2.codeanyapp.com']
+ALLOWED_HOSTS = ["biohack-yourself.herokuapp.com", "localhost"]
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-gogomeg-biohack-yourself-kjjb3xhe21.us2.codeanyapp.com']
+    'https://8000-gogomeg-biohack-yourself-kjjb3xhe21.us2.codeanyapp.com/']
 
 # Application definition
 
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
+    'crispy_bootstrap4',
     'cloudinary',
     'cloudinary_storage',
     'djrichtextfield'
@@ -89,7 +90,7 @@ MIDDLEWARE = [
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 ROOT_URLCONF = 'main.urls'
