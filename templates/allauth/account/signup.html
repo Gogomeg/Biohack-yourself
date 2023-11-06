@@ -1,6 +1,7 @@
-{% extends "account/base.html" %} {% load i18n %} /* Add title block */ {% block
-title %}{% trans "Signup" %}{% endblock %} /* Add content block */ {% block
-content %}
+{% extends "account/base.html" %} {% load i18n %}
+<pre>{% block title %}{% trans "Signup" %}{% endblock %}</pre>
+
+<pre>{% block content %}</pre>
 <div class="container text-center">
   <h1>{% trans "Sign Up" %}</h1>
 
@@ -25,3 +26,4 @@ content %}
     <button type="submit" class="btn btn-primary w-25">Sign Up</button>
   </form>
 </div>
+{% endblock %}
