@@ -1,6 +1,7 @@
 from django import forms
 from djrichtextfield.widgets import RichTextWidget
 from .models import Hack
+from.models import Comment
 
 
 class HackForm(forms.ModelForm):
@@ -31,3 +32,8 @@ class HackForm(forms.ModelForm):
             "image_alt": "Describe Image",
             "hack_type": "Health Hack Type",
         }
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('body',)
