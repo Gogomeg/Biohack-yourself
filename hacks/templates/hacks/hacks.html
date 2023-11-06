@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Health Hacks{% endblock %}
+
+{% block content %}
+<h1 class="text-center p-2 d-block">
+    Latest Health Hacks
+</h1>
+<div class="container d-flex flex-row flex-wrap justify-content-center">
+    {% for hack in hacks %}
+    <a href="{% url 'hack_detail' hack.id %}" class="hacks" aria-label="Click to view {{hack.title}}">
+        <div class="card m-3" style="width: 18rem;">
+            <img src="{{hack.image.url}}" class="card-img-top" alt="{{hack.image_alt}}">
+            <div class="card-body">
+                <h2 class="card-title">{{hack.title}}</h2>
+                <p class="card-text">{{hack.description|truncatechars:100}}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

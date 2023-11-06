@@ -1,12 +1,12 @@
 from django.views.generic import (
-    CreateView, ListView,
-    DetailView, DeleteView,
-    UpdateView
+    CreateView,
+    ListView,
+    DetailView,
+    DeleteView,
+    UpdateView,
 )
 
-from django.contrib.auth.mixins import (
-    UserPassesTestMixin, LoginRequiredMixin
-)
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 
 from django.db.models import Q
 
@@ -14,7 +14,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Hack
 from .forms import HackForm
-
 
 
 class AddHack(LoginRequiredMixin, CreateView):
@@ -29,3 +28,31 @@ class AddHack(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(AddHack, self).form_valid(form)
 
+
+class Hacks(ListView):
+    """View all hacks"""
+
+    template_name = "hacks/hacks.html"
+    model = Hack
+    context_object_name = "hacks"
+
+    def get_queryset(self, **kwargs):
+        query = self.request.GET.get("q")
+        if query:
+            recipes = self.model.objects.filter(
+                Q(title__icontains=query)
+                | Q(description__icontains=query)
+                | Q(content__icontains=query)
+                | Q(hack_type__icontains=query)
+            )
+        else:
+            hacks = self.model.objects.all()
+        return hacks
+
+
+class HackDetail(DetailView):
+    """View a single health hack"""
+
+    template_name = "hacks/hack_detail.html"
+    model = Hack
+    context_object_name = "hack"

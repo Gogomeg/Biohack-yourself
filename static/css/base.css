@@ -97,3 +97,88 @@ a.navbar-brand {
     border-radius: 5px;
     text-align: center;
 }
+
+/* Health Hacks */
+
+.card {
+    height: 90%;
+    margin-top: 1rem;
+}
+
+.hacks {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.hacks:hover {
+    cursor: pointer;
+}
+
+.hack-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hack-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content,
+.hack-detail {
+    width: 100%;
+}
+
+.hack-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hack-pic {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 62.5em) {
+    .hack-img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .hack-detail {
+        width: 60%;
+        padding: 2rem;
+    }
+
+    .hack-container {
+        flex-direction: row;
+    }
+
+    .hack-info {
+        flex-direction: row;
+        border: 1px solid var(--black);
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .profile {
+        flex-direction: row;
+    }
+
+    .info {
+        width: 30%;
+    }
+
+    .profile-hacks {
+        width: 70%;
+        padding: 1.5rem 3rem;
+    }
+
+    .profile-hacks a {
+        text-decoration: none;
+    }
+}
