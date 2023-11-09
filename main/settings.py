@@ -19,6 +19,8 @@ development = os.environ.get('DEVELOPMENT', False)
 if os.path.isfile("env.py"):
     import env
 
+development = os.environ.get('DEVELOPMENT', False)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,8 +33,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = ['biohack-yourself.herokuapp.com',
-                 '8000-gogomeg-biohack-yourself-2sj52uobrm.us2.codeanyapp.com']
+if development:
+    ALLOWED_HOSTS = [
+        'https://8000-gogomeg-biohack-yourself-2sj52uobrm.us2.codeanyapp.com']
+else:
+    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -101,7 +106,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth')
         ],
         'APP_DIRS': True,
@@ -182,6 +186,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 
 # Cloudinary Settings
 
