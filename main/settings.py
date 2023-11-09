@@ -16,7 +16,7 @@ import dj_database_url
 
 development = os.environ.get('DEVELOPMENT', False)
 
-if os.path.isfile('env.py'):
+if os.path.isfile("env.py"):
     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'crispy_bootstrap5',
-    'crispy_bootstrap4',
     'cloudinary',
     'cloudinary_storage',
     'djrichtextfield'
@@ -139,12 +138,12 @@ if development:
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL")),
-}
+    }
 
 
 # Password validation
