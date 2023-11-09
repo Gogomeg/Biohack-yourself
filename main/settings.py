@@ -32,11 +32,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = development
 
 ALLOWED_HOSTS = ['biohack-yourself.herokuapp.com',
-                 '8000-gogomeg-biohack-yourself-kjjb3xhe21.us2.codeanyapp.com']
+                 '8000-gogomeg-biohack-yourself-2sj52uobrm.us2.codeanyapp.com']
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-gogomeg-biohack-yourself-kjjb3xhe21.us2.codeanyapp.com']
+    'https://8000-gogomeg-biohack-yourself-2sj52uobrm.us2.codeanyapp.com']
 
 # Application definition
 
