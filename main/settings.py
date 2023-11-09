@@ -35,13 +35,13 @@ DEBUG = development
 
 if development:
     ALLOWED_HOSTS = [
-        'https://8000-gogomeg-biohack-yourself-2sj52uobrm.us2.codeanyapp.com']
+        '8000-gogomeg-biohack-yourself-w040cnlht2.us2.codeanyapp.com']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-gogomeg-biohack-yourself-2sj52uobrm.us2.codeanyapp.com']
+    'https://8000-gogomeg-biohack-yourself-w040cnlht2.us2.codeanyapp.com']
 
 # Application definition
 
@@ -106,7 +106,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates', 'allauth')
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+            os.path.join(BASE_DIR, 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
