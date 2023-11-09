@@ -33,6 +33,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 if development:
     ALLOWED_HOSTS = ['localhost']
 else:
