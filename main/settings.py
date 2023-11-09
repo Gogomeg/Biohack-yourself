@@ -34,8 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = development
 
 if development:
-    ALLOWED_HOSTS = [
-        '8000-gogomeg-biohack-yourself-w040cnlht2.us2.codeanyapp.com']
+    ALLOWED_HOSTS = ['localhost']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
