@@ -36,7 +36,8 @@ DEBUG = development
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 if development:
-    ALLOWED_HOSTS = ['localhost']
+    ALLOWED_HOSTS = [
+        '8000-gogomeg-biohack-yourself-w040cnlht2.us2.codeanyapp.com']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
