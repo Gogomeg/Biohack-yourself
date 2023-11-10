@@ -36,7 +36,7 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
-    '8000-gogomeg-biohack-yourself-w040cnlht2.us2.codeanyapp.com', os.environ.get('HEROKU_HOSTNAME')]
+    "8000-gogomeg-biohack-yourself-w040cnlht2.us2.codeanyapp.com", "biohack-yourself.herokuapp.com"]
 
 
 CSRF_TRUSTED_ORIGINS = [
